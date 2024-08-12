@@ -1,0 +1,660 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap"); */
+
+:root {
+    --pink: #f14e95;
+    --bg: #0a0a0a;
+    --shadow: 0 5px 5px rgba(3, 3, 3, 0.2);
+    --animate-duration: 500ms;
+    --animate-delay: 100ms;
+}
+body.no-scroll {
+    overflow: hidden;
+    overflow-x: hidden;
+  
+}
+body {
+    overflow-x: hidden;
+}
+  
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.2rem;
+    background: linear-gradient(rgba(148, 83, 83, 0.5), #66CCFF); /* Background dasar */
+    background-position: center;
+    background-size: cover;
+    box-sizing: border-box;
+    height: 5990px;
+}
+
+.hero {
+    padding: 2rem;
+    
+    box-sizing: border-box;
+    position: relative;
+    min-height: 100vh;
+    background-image: url(img/illustration-wedding-couple-malay-traditional-clothes_540637-932.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.hero h1,
+.hero h4,
+.hero p {
+    text-shadow: var(--shadow);
+}
+
+.hero h1 {
+    font-family: 'Allura';
+    font-size: 8rem;
+}
+
+#hero .aziz,
+#hero .yati {
+    font-family: 'Allura';
+    font-weight: 300;
+}
+
+.hero h4 {
+    font-size: 1.8rem;
+}
+
+.hero p {
+    font-size: 1.8rem;
+}
+
+.simply-countdown>.simply-section{
+    width: 50px;
+height: 50px;
+padding: 80px;
+display: flex;
+align-items: center;
+justify-content: center;
+float: left;
+margin: 10px;
+background: rgb(139, 139, 204);
+box-shadow: 0 1px 3px rgba(36, 22, 22, 0.12), 0 1px 2px rgba(131, 115, 115, 0.24);
+border-radius: 50%;
+font-size: 1.2rem;
+
+} 
+
+.hero a {
+    color: var(--pink);
+    background-color: rgb(240, 230, 230);
+}
+
+.hero a:hover {
+    background-color: var(--pink);
+    color: white;
+}
+
+/* Navbar */
+/* Menetapkan latar belakang dan posisi navbar */
+.mynavbar {
+    background-color: rgba(201, 192, 192, 0.5);
+    width: 100%; /* Pastikan navbar mengisi lebar layar */
+}
+
+/* Mengatur offcanvas untuk lebar penuh */
+.mynavbar .offcanvas {
+    width: 100%; /* Menyesuaikan lebar offcanvas */
+    max-width: 500px; /* Atur lebar maksimum sesuai kebutuhan */
+}
+
+/* Styling untuk offcanvas body */
+.mynavbar .offcanvas-body {
+    padding: 1rem; /* Memberikan padding agar konten tidak terlalu menempel pada tepi */
+}
+
+/* Styling untuk brand dan title */
+.mynavbar .navbar-brand,
+.mynavbar .offcanvas-title {
+    font-family: 'Allura';
+    font-size: 2rem;
+}
+
+/* Styling untuk link di navbar */
+.mynavbar .nav-link {
+    text-transform: uppercase;
+}
+
+
+/* Section Home */
+.home {
+    background-color: rgba(233, 219, 219, 0);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin-top: -2rem;
+    padding-top: 15rem;
+    padding-bottom: 5rem;
+}
+
+.home h2,
+.info h2,
+.story h2,
+.gallery h2 {
+    color: var(--pink);
+    font-family: 'Allura';
+    font-size: 4rem;
+}
+
+.home h3 {
+    color: #5c565c;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    margin-left: 10px;
+}
+
+#home .aziz,
+#home .yati {
+    font-family: 'Allura';
+    font-size: 4rem;
+    font-weight: 400;
+}
+
+.home p,
+.gallery p {
+    font-size: 1.3rem;
+    color: #665b5b;
+}
+
+.home p {
+    text-shadow: 2px 2px 4px rgba(218, 212, 212, 0.685);
+}
+
+/* Gambar */
+.home .couple {
+    margin-top: 100px;
+    margin-left:  10px;
+    margin-right: 20px;
+}
+
+.home .couple img {
+    width: 100%;
+    margin-left: 7px;
+}
+
+/* Info */
+.info {
+    background-position: center;
+    color: #665b5b;
+    padding-top: 9rem;
+    padding-bottom: 7rem;
+}
+
+.info h2 {
+    color: var(--pink);
+    font-family: 'Allura';
+    font-size: 2.8rem;
+}
+
+.info .alamat {
+    font-size: 1.1rem;
+}
+
+.info .description {
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+/* Card */
+.card-body {
+    background: linear-gradient(rgba(243, 230, 240, 0.678), #d8d8dd);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-text {
+    display: flex;
+    align-items: center;
+}
+
+.icon-text svg {
+    margin-right: 5px; /* Jarak antara ikon dan teks */
+}
+
+.card-header,
+.card-footer {
+    background-color: rgba(242, 230, 240, 0.678); /* Warna latar belakang header dan footer */
+}
+
+.story {
+    padding-top: 10rem;
+    padding-bottom: 8rem;
+    text-transform: uppercase;
+    color: #666;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.story p {
+    font-size: 1rem;
+    font-weight: 200;
+}
+.story span {
+    font-size: 1.3rem;
+}
+.story h3 {
+    font-family: 'Josefin-Slab';
+    font-size: 1rem;
+    text-transform: lowercase;
+    font-size: medium;
+}
+.timeline {
+    list-style: none;
+    padding: 1.4rem;
+    margin-top: 5rem;
+    position: relative;
+}
+/* .timeline-heading {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #666;
+}
+.timeline-body {
+   margin: 10px;
+   padding: 20px;
+} */
+
+.timeline-panel {
+    padding: 10px;
+    position: relative;
+    border-radius: 6px;
+    margin-top: 6rem;
+}
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: #ccc;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.timeline li {
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: flex;
+    justify-content: flex-end; /* Default align panels to the right */
+}
+
+.timeline li:nth-child(odd) {
+    justify-content: flex-start; /* Align panels to the left for odd items */
+}
+
+.timeline-image {
+    width: 100px;
+    height: 100px;
+    background-color: #a8a5c4;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.timeline-panel {
+    background: #8dbed4;
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin-bottom: 70px;
+    max-width: 40%;
+    position: relative;
+    z-index: 6;
+}
+
+.timeline-heading h3 {
+    margin: 7px;
+    font-size: 1.5em;
+}
+
+.timeline-heading span {
+    display: block;
+    font-size: 0.9em;
+    color: #888;
+}
+
+.timeline-body p {
+    margin: 0;
+}
+
+.timeline li:nth-child(odd) .timeline-panel {
+    margin-right: 50%;
+    text-align: left;
+}
+
+.timeline li:nth-child(even):not(:nth-child(2)) .timeline-panel {
+    margin-left: 50%;
+    text-align: right;
+}
+
+.gallery span {
+    color: #665b5b;
+}
+/* RSVV */
+.rsvv .container {
+    padding: 7%;
+}
+
+.rsvv h2 {
+    font-family: 'Allura';
+    font-size: 3rem;
+    color: var(--pink);
+}
+
+.rsvv p {
+    font-family: 'Josefin Sans';
+    font-size: 1.5rem;
+    color: #cc7474;
+}
+
+.rsvv button {
+    background-color: rgb(154, 100, 204);
+    color: rgba(255, 255, 255, 0.856);
+    border: 1px solid blueviolet;
+}
+
+.rsvv button:hover {
+    background-color: white;
+    color: rgb(158, 104, 209);
+    border: 1px solid white;
+}
+
+/* Gifts */
+.gifts h2 {
+    font-family: 'Allura';
+    font-size: 3rem;
+    color: var(--pink);
+}
+
+.gifts p,
+.gifts span {
+    font-family: 'Josefin Sans';
+    font-size: 1.5rem;
+    color: #cc7474;
+}
+
+
+/* Card Bank */
+.card-bank {
+    width: 315px;
+    height: 180px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    z-index: 1;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    margin: 30px auto; /* Jarak di atas, bawah, kiri, dan kanan otomatis */
+}
+
+.visa_logo {
+    float: right;
+    padding: 8px;
+}
+
+.visa_logo img {
+    width: 65px;
+    height: 25px;
+}
+
+.visa_info {
+    margin: 26px 0;
+}
+
+.visa_info img {
+    width: 50px;
+    height: 40px;
+}
+
+img {
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+p {
+    margin-left: 15px;
+}
+
+.visa_info p {
+    font-size: 20px;
+    padding: 9px 0;
+    letter-spacing: 2px;
+    color: #5c565c;
+}
+
+footer, body {
+    height: 100%;
+    margin: 0;
+  }
+  .footer.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #0a0a0a;
+  }
+  footer {
+    margin-top: auto;
+  }
+  
+
+.footer a {
+    color: var(--bg);
+    font-weight: bold;
+}
+
+.myfooter ul {
+    list-style-type: none; 
+    padding: 0;
+    margin: 0; 
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto; 
+  }
+  
+  ul li {
+    margin-right: 15px;
+  }
+  
+  ul li a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  ul li a svg, ul li a i {
+    font-size: 24px;
+}
+    
+   
+
+.audio-icon-wrapper {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    display: none; /* Menyembunyikan ikon pada awalnya */
+    animation: rotating 4s linear infinite;
+    transform-origin: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 0;
+}
+/* Styling untuk audio container */
+#audio-container {
+    display: none; /* Menyembunyikan kontainer audio pada awalnya */
+}
+
+.audio-icon-wrapper {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    display: none; /* Menyembunyikan ikon pada awalnya */
+    z-index: 1000;
+}
+
+.audio-icon-wrapper svg {
+    transition: transform 0.3s ease; /* Animasi transisi */
+}
+@keyframes rotating {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Media Queries */
+
+
+@media (min-width: 768px) {
+    html {
+        font-size: 65%;
+    }
+
+    .simply-countdown > .simply-section {
+        padding: 15px;
+        margin: 5px;
+    }
+
+    .mynavbar .nav-link {
+        font-size: 1.7rem;
+        text-align: center;
+    }
+
+    .timeline::before {
+        left: 50%;
+    }
+   
+
+    @media (min-width: 768px) {
+        .timeline-panel {
+            max-width: 700%; /* Ukuran kolom teks untuk layar lebih besar */
+        }
+    }
+    
+    @media (max-width: 575.98px) {
+        .timeline-panel {
+            max-width: 900%; /* Ukuran kolom teks untuk layar lebih kecil */
+        }
+    }
+    
+
+    .timeline li {
+        margin-bottom: 8rem;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .timeline li:nth-child(odd) {
+        justify-content: flex-start;
+    }
+
+    .timeline li .timeline-image {
+        width: 100px;
+        height: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 50%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 1;
+    }
+
+    .timeline li .timeline-panel {
+        max-width: 40%;
+        background: #8dbed4;
+        border-radius: 10px;
+        padding: 40px 70px;
+        margin-bottom: 30px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .timeline li:nth-child(odd) .timeline-panel {
+        margin-right: 50%;
+        text-align: left;
+        
+    }
+
+    .timeline li:nth-child(even):not(:nth-child(2)) .timeline-panel {
+        margin-left: 50%;
+        text-align: right;
+    }
+}
+
+
+@media (min-width: 576px) {
+    html {
+        font-size: 60%;
+    }
+    .simply-countdown > .simply-section {
+        padding: 10px;
+        margin: 5px;
+    }
+
+    
+}
+
+@media (max-width: 575.98px) {
+    html {
+        font-size: 50%;
+    }
+
+    .simply-countdown > .simply-section {
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .timeline::before {
+        left: 60px; /* Adjust position of the center line */
+    }
+
+    .timeline li {
+        flex-direction: column; /* Ensure items stack vertically */
+        align-items: flex-start; /* Align items to the start of the container */
+    }
+
+    .timeline li .timeline-image {
+        left: 15px; /* Adjust position of the timeline image */
+        margin-left: 40px; /* Remove additional left margin */
+        top: 0; /* Align top of the image */
+    }
+
+    .timeline li .timeline-panel {
+        width: 300px;
+        margin-left: 130px;
+        margin-bottom: 20px;
+        
+    }
+
+    .timeline li:nth-child(even):not(:nth-child(2)) .timeline-panel {
+        margin-left: 100px; /* Same offset for even panels */
+    }
+}
