@@ -145,7 +145,7 @@ font-size: 1.2rem;
 .home h2,
 .info h2,
 .story h2,
-.gallery h2 {
+.galery h2 {
     color: var(--pink);
     font-family: 'Allura';
     font-size: 4rem;
@@ -166,13 +166,12 @@ font-size: 1.2rem;
 }
 
 .home p,
-.gallery p {
+.galery p {
     font-size: 1.3rem;
     color: #665b5b;
 }
 
-.home p {
-    text-shadow: 2px 2px 4px rgba(218, 212, 212, 0.685);
+
 }
 
 /* Gambar */
