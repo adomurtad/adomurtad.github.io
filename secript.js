@@ -71,3 +71,15 @@ const namaContainer = document.querySelector('.hero h4 span');
 namaContainer.innerText = `${pronoun} ${nama},`.replace(/ ,$/, ',');
 
 document.querySelector('#nama').value = nama;
+document.addEventListener("DOMContentLoaded", function () {
+    var navbarLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    var navbarCollapse = document.querySelector('.navbar-collapse');
+
+    navbarLinks.forEach(function (link) {
+        link.addEventListener('click', function () {
+            // Tutup navbar saat link diklik
+            var bsCollapse = new bootstrap.Collapse(navbarCollapse);
+            bsCollapse.hide();
+        });
+    });
+});
