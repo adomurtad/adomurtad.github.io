@@ -100,35 +100,30 @@ font-size: 1.2rem;
     color: white;
 }
 
-/* Navbar */
-/* Menetapkan latar belakang dan posisi navbar */
-.mynavbar {
-    background-color: rgba(201, 192, 192, 0.5);
-    width: 100%; /* Pastikan navbar mengisi lebar layar */
+/* CSS untuk navbar dengan background blur */
+.navbar {
+  backdrop-filter: blur(10px); /* Mengatur tingkat blur */
+  background-color: transparent !important;
+  
 }
 
-/* Mengatur offcanvas untuk lebar penuh */
-.mynavbar .offcanvas {
-    width: 100%; /* Menyesuaikan lebar offcanvas */
-    max-width: 500px; /* Atur lebar maksimum sesuai kebutuhan */
+/* CSS untuk toggle button */
+.navbar-toggler {
+  background-color: transparent; /* Anda bisa mengubah warna ini */
 }
 
-/* Styling untuk offcanvas body */
-.mynavbar .offcanvas-body {
-    padding: 1rem; /* Memberikan padding agar konten tidak terlalu menempel pada tepi */
+/* Tambahan untuk mengatur gaya font Aziz&Yati */
+.navbar-brand {
+  font-family: 'Allura', cursive;
+  font-size: 2rem;
+  font-weight: 200; /* Sesuaikan sesuai kebutuhan */
 }
 
-/* Styling untuk brand dan title */
-.mynavbar .navbar-brand,
-.mynavbar .offcanvas-title {
-    font-family: 'Allura';
-    font-size: 2rem;
+/* Tambahkan margin-top untuk section pertama agar tidak tertutup oleh navbar */
+#home {
+  margin-top: 70px; /* Sesuaikan dengan tinggi navbar */
 }
 
-/* Styling untuk link di navbar */
-.mynavbar .nav-link {
-    text-transform: uppercase;
-}
 
 
 /* Section Home */
@@ -138,13 +133,12 @@ font-size: 1.2rem;
     background-position: center;
     height: 100vh;
     margin-top: -2rem;
-    padding-top: 15rem;
+    padding-top: 10rem;
     padding-bottom: 5rem;
 }
 
 .home h2,
 .info h2,
-.story h2,
 .galery h2 {
     color: var(--pink);
     font-family: 'Allura';
@@ -152,7 +146,7 @@ font-size: 1.2rem;
 }
 
 .home h3 {
-    color: #5c565c;
+    color: #997199;
     font-size: 1.4rem;
     margin-bottom: 1rem;
     margin-left: 10px;
@@ -172,13 +166,12 @@ font-size: 1.2rem;
 }
 
 
-}
-
 /* Gambar */
 .home .couple {
     margin-top: 100px;
     margin-left:  10px;
     margin-right: 20px;
+    padding-top: -4rem;
 }
 
 .home .couple img {
@@ -197,15 +190,15 @@ font-size: 1.2rem;
 .info h2 {
     color: var(--pink);
     font-family: 'Allura';
-    font-size: 2.8rem;
+    font-size: 4rem;
 }
 
 .info .alamat {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
 }
 
 .info .description {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 100;
 }
 
@@ -647,8 +640,9 @@ ul{list-style: none}
 }
 
 
-.gallery span {
-    color: #665b5b;
+.galery span {
+  font-size: 1.3rem;
+  color: #665b5b;
 }
 /* RSVV */
 .rsvv .container {
@@ -657,13 +651,13 @@ ul{list-style: none}
 
 .rsvv h2 {
     font-family: 'Allura';
-    font-size: 3rem;
+    font-size: 4rem;
     color: var(--pink);
 }
 
 .rsvv p {
     font-family: 'Josefin Sans';
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     color: #cc7474;
 }
 
@@ -682,14 +676,14 @@ ul{list-style: none}
 /* Gifts */
 .gifts h2 {
     font-family: 'Allura';
-    font-size: 3rem;
+    font-size: 4rem;
     color: var(--pink);
 }
 
 .gifts p,
 .gifts span {
     font-family: 'Josefin Sans';
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     color: #cc7474;
 }
 
