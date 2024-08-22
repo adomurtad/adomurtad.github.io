@@ -106,7 +106,10 @@ font-size: 1.2rem;
   background-color: transparent !important;
   
 }
-
+.navbar-nav {
+  margin-left: auto;
+  font-size:1.3rem;
+}
 /* CSS untuk toggle button */
 .navbar-toggler {
   background-color: transparent; /* Anda bisa mengubah warna ini */
