@@ -33,10 +33,10 @@ body {
     background-size: cover;
     box-sizing: border-box;
     height: 5990px;
-    background-image: url('https://th.bing.com/th/id/OIP.idnv8_jmc67Jxhglise7ZAHaNK?w=236&h=419&c=7&o=5&pid=1.20');
+    background-image: url('https://i.pinimg.com/originals/07/1f/65/071f65fad1b23671fa51d59ef3944284.jpg');
     background-size: cover;
     background-position: center;
-    animation: zoomInBackground 10s ease-in-out infinite;
+    animation: zoomInBackground 25s ease-in-out infinite;
   }
   
 
@@ -79,11 +79,11 @@ body {
 }
 
 .hero h4 {
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
 
 .hero p {
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
 
 .simply-countdown>.simply-section{
@@ -103,12 +103,12 @@ font-size: 1.2rem;
 } 
 
 .hero a {
-    color: var(--pink);
+    color: var(white);
     background-color: rgb(240, 230, 230);
 }
 
 .hero a:hover {
-    background-color: var(--pink);
+    background-color: var(white);
     color: white;
 }
 
@@ -121,23 +121,32 @@ font-size: 1.2rem;
 }
 .navbar-nav {
   margin-left: auto;
+  color: white;
+}
+.nav-link {
+  color: white;
+  font-size: 1.5rem;
 }
 /* CSS untuk toggle button */
 .navbar-toggler {
-  background-color: transparent; 
-  font-size: 2rem;
+  background-color:white;
+  font-size: 1.6rem;
+  
 }
-
-
+.nav-span {
+  color: white;
+}
+/* Tambahan untuk mengatur gaya font Aziz&Yati */
 .navbar-brand {
   font-family: 'Allura', cursive;
   font-size: 3rem;
   font-weight: 200;
+  color: white;
 }
 
-
+/* Tambahkan margin-top untuk section pertama agar tidak tertutup oleh navbar */
 #home {
-  margin-top: 70px;
+  margin-top: 70px; 
 }
 
 
@@ -156,14 +165,14 @@ font-size: 1.2rem;
 .home h2,
 .info h2,
 .galery h2 {
-    color: var(--pink);
+    color:white;
     font-family: 'Allura';
     font-size: 4rem;
 }
 
 .home h3 {
-    color: black;
-    
+    color: white;
+    font-family: 'Roboto', 'Arial', sans-serif;
     font-size: 1.8rem;
     margin-bottom: 1rem;
     margin-left: 10px;
@@ -178,8 +187,9 @@ font-size: 1.2rem;
 
 .home p,
 .galery p {
-    font-size: 1.3rem;
-    color: #3b1a3b;
+  font-family: 'Roboto', 'Arial', sans-serif;
+    font-size: 1.5rem;
+    color: white;
 }
 
 
@@ -199,24 +209,34 @@ font-size: 1.2rem;
 /* Info */
 .info {
     background-position: center;
-    color: #3b1a3b;
+    color: white;
     padding-top: 9rem;
     padding-bottom: 7rem;
 }
-
+.info a {
+  font-family: 'Roboto', 'Arial', sans-serif;
+  margin: 4rem;
+}
 .info h2 {
-    color: var(--pink);
+    color: white;
     font-family: 'Allura';
     font-size: 4rem;
 }
 .info h3 {
-  color: rgb(36, 25, 25);
-  font-size: 1.7rem;
+  font-family: 'Roboto', 'Arial', sans-serif;
+  color: white;
+  font-size: 1.5rem;
+  margin: 4rem;
+}
+.info p {
+  font-family: 'Roboto', 'Arial', sans-serif;
+  color: white;
+  font-size: 1.5rem;
 }
 
-
 .info .description {
-    font-size: 1.4rem;
+  font-family: 'Roboto', 'Arial', sans-serif;
+    font-size: 1.5rem;
     font-weight: 100;
 }
 
@@ -235,12 +255,12 @@ font-size: 1.2rem;
 }
 
 .icon-text svg {
-    margin-right: 5px; 
+    margin-right: 5px;
 }
 
 .card-header,
 .card-footer {
-    background-color: rgba(242, 230, 240, 0.678);
+    background-color: rgba(242, 230, 240, 0.678); 
 }
 
 /* CSS dasar untuk section timeline */
@@ -250,8 +270,19 @@ font-size: 1.2rem;
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
+  color: white;
+}
+#timeline h2 {
+  font-family: 'Allura';
+  font-size: 4rem;
+  text-align: center;
+  margin: 6rem;
 }
 
+#timeline p {
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-size: 1.3rem;
+}
 #timeline ul {
   list-style: none;
   padding: 0;
@@ -269,7 +300,7 @@ font-size: 1.2rem;
   width: 4px; 
   background: #cfbaba;
   transform: translateX(-50%);
-  z-index: 1; 
+  z-index: 1;
 }
 
 /* Gaya setiap item dalam timeline */
@@ -281,8 +312,8 @@ font-size: 1.2rem;
 }
 
 #timeline ul.line li:nth-child(odd) {
-  left: 0; 
-  text-align: right;
+  left: 0;
+  text-align: right; 
 }
 
 #timeline ul.line li:nth-child(even) {
@@ -300,7 +331,7 @@ font-size: 1.2rem;
   z-index: 2;
 }
 
-/* Menyelaraskan teks paragraf ke kiri di dalam .cont */
+/* paragraf ke kiri di dalam .cont */
 #timeline ul.line li .cont p {
   text-align: left; 
   font-size: 1.3rem;
@@ -316,17 +347,17 @@ font-size: 1.2rem;
 #timeline ul.line li .cont time {
   display: block;
   margin-top: 10px;
-  color: black;
-  font-size: 1.3em;
+  color: white;
+  font-size: 1.4em;
 }
 
-/* Titik di tengah timeline untuk setiap item */
+/* Titik di tengah timeline */
 #timeline ul.line li::before {
   content: '';
   position: absolute;
   width: 15px;
   height: 15px;
-  background: #41e6e6;
+  background: #41e6e6; 
   border-radius: 50%;
   top: 20px; 
   z-index: 2;
@@ -344,8 +375,10 @@ font-size: 1.2rem;
 
 
 .galery span {
+  font-family: 'Roboto', 'Arial', sans-serif;
   font-size: 1.3rem;
-  color: #3b1a3b;
+  color: white;
+  margin: 3rem;
 }
 /* RSVV */
 .rsvv .container {
@@ -355,13 +388,13 @@ font-size: 1.2rem;
 .rsvv h2 {
     font-family: 'Allura';
     font-size: 4rem;
-    color: var(--pink);
+    color: white;
 }
 
 .rsvv p {
-    font-family: 'Josefin Sans';
-    font-size: 1.7rem;
-    color: #3b1a3b;
+    font-family: 'Roboto', 'Arial', sans-serif;
+    font-size: 1.5rem;
+    color: white;
 }
 /* CSS untuk form */
 form#my-form {
@@ -378,7 +411,7 @@ form#my-form {
   form#my-form .form-label {
     font-weight: 590;
     margin-bottom: 10px;
-    color: #333;
+    color: white;
     font-size: 23px;
   }
   
@@ -427,7 +460,7 @@ form#my-form {
     margin: 2rem;
     margin-right: auto;
     font-size: 21px;
-    color: black;
+    color: white;
     text-decoration: none;
     transition: color 0.3s ease;
   }
@@ -472,14 +505,14 @@ form#my-form {
 .gifts h2 {
     font-family: 'Allura';
     font-size: 4rem;
-    color: var(--pink);
+    color: white;
 }
 
 .gifts p,
 .gifts span {
-    font-family: 'Josefin Sans';
-    font-size: 1.7rem;
-    color: #3b1a3b;
+  font-family: 'Roboto', 'Arial', sans-serif;
+    font-size: 1.5rem;
+    color: white;
 }
 
 
@@ -494,7 +527,7 @@ form#my-form {
     overflow: hidden;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    margin: 30px auto;
+    margin: 30px auto; 
 }
 
 .visa_logo {
@@ -529,7 +562,7 @@ p {
     font-size: 20px;
     padding: 9px 0;
     letter-spacing: 2px;
-    color: #5c565c;
+    color: white;
 }
 
 
@@ -537,12 +570,14 @@ p {
 footer, body {
     height: 100%;
     margin: 0;
+    color: white;
+    
   }
   .footer.container {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #0a0a0a;
+    background-color: whitesmoke;
   }
   footer {
     margin-top: auto;
@@ -552,6 +587,8 @@ footer, body {
 .footer a {
     color: var(--bg);
     font-weight: bold;
+    font-family: 'Roboto', 'Arial', sans-serif;
+
 }
 
 .myfooter ul {
@@ -579,6 +616,7 @@ footer, body {
  
 
 .audio-icon-wrapper {
+    color: white;
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -593,7 +631,7 @@ footer, body {
 }
 /* Styling untuk audio container */
 #audio-container {
-    display: none; 
+    display: none;
 }
 
 .audio-icon-wrapper {
@@ -630,71 +668,13 @@ footer, body {
         margin: 5px;
     }
 
-    .mynavbar .nav-link {
-        font-size: 1.7rem;
-        text-align: center;
-    }
-
-    .timeline::before {
-        left: 50%;
-    }
-   
-
-    @media (min-width: 768px) {
-        .timeline-panel {
-            max-width: 700%;
-        }
-    }
     
-    @media (max-width: 575.98px) {
-        .timeline-panel {
-            max-width: 900%;
-        }
-    }
-    
-
-    .timeline li {
-        margin-bottom: 8rem;
-        display: flex;
-        justify-content: flex-end;
-    }
-
-    .timeline li:nth-child(odd) {
-        justify-content: flex-start;
-    }
-
-    .timeline li .timeline-image {
-        width: 100px;
-        height: 100px;
-        left: 50%;
-        transform: translateX(-50%);
-        border-radius: 50%;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        z-index: 1;
-    }
-
-    .timeline li .timeline-panel {
-        max-width: 40%;
-        background: #8dbed4;
-        border-radius: 10px;
-        padding: 40px 70px;
-        margin-bottom: 30px;
-        position: relative;
-        z-index: 2;
-    }
-
-    .timeline li:nth-child(odd) .timeline-panel {
-        margin-right: 50%;
-        text-align: left;
-        
-    }
-
-    .timeline li:nth-child(even):not(:nth-child(2)) .timeline-panel {
-        margin-left: 50%;
-        text-align: right;
-    }
+}
+/* Media query untuk tampilan mobile */
+@media (max-width: 768px) {
+  .col-lg-6 {
+      margin-bottom: 20px;
+  }
 }
 
 
@@ -720,29 +700,5 @@ footer, body {
         margin: 5px;
     }
 
-    .timeline::before {
-        left: 60px; 
-    }
-
-    .timeline li {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .timeline li .timeline-image {
-        left: 15px;
-        margin-left: 40px; 
-        top: 0;
-    }
-
-    .timeline li .timeline-panel {
-        width: 300px;
-        margin-left: 130px;
-        margin-bottom: 20px;
-        
-    }
-
-    .timeline li:nth-child(even):not(:nth-child(2)) .timeline-panel {
-        margin-left: 100px;
-    }
+    
 }
