@@ -424,6 +424,7 @@ form#my-form {
     box-sizing: border-box;
     font-size: 14px;
     padding: 6px;
+    color: white;
   }
   
   form#my-form .form-control:focus,
