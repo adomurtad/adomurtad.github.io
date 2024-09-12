@@ -405,14 +405,16 @@ form#my-form {
     max-width: 600px;
     margin: 50px auto;
     font-family: 'Allura', cursive;
+    color: white;
   }
   
   /* Gaya label dan input */
   form#my-form .form-label {
     font-weight: 590;
     margin-bottom: 10px;
-    color: white;
+    color: white !important;
     font-size: 23px;
+    
   }
   
   form#my-form .form-control, 
@@ -426,7 +428,8 @@ form#my-form {
     padding: 6px;
     color: white;
   }
-  
+
+
   form#my-form .form-control:focus,
   form#my-form .form-select:focus {
     font: 1em sans-serif;
