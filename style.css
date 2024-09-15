@@ -46,7 +46,7 @@ body {
     box-sizing: border-box;
     position: relative;
     min-height: 100vh;
-    background-image: url(img/susunan-acara-temu-manten-Jawa-2266912924.webp);
+    background-image: url(img/DSC00202.JPG);
     background-size: cover;
     background-position: center;
 }
@@ -144,10 +144,6 @@ font-size: 1.2rem;
   color: white;
 }
 
-/* Tambahkan margin-top untuk section pertama agar tidak tertutup oleh navbar */
-#home {
-  margin-top: 70px; 
-}
 
 
 
@@ -705,4 +701,47 @@ footer, body {
     }
 
     
+}
+/* Section Home */
+.kotak {
+  border: 5px solid white;
+  padding: 18px;
+  margin: 0 auto;
+  max-width: 700px;
+  border-radius: 15px;
+
+
+  
+}
+
+.info {
+  margin: 7rem 0;
+}
+
+/* Untuk layar dengan tinggi di bawah 600px */
+@media (max-height: 600px) {
+  section {
+    margin: 20px 0;
+  }
+}
+
+/* Untuk layar dengan tinggi antara 600px hingga 800px */
+@media (min-height: 601px) and (max-height: 800px) {
+  section {
+    margin: 40px 0;
+  }
+}
+
+/* Untuk layar dengan tinggi antara 800px hingga 1000px */
+@media (min-height: 801px) and (max-height: 1000px) {
+  section {
+    margin: 60px 0;
+  }
+}
+
+/* Untuk layar dengan tinggi di atas 1000px */
+@media (min-height: 1001px) {
+  section {
+    margin: 80px 0;
+  }
 }
