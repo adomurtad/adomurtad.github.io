@@ -41,14 +41,13 @@ body {
   
 
 .hero {
-    padding: 2rem;
-    
-    box-sizing: border-box;
-    position: relative;
-    min-height: 100vh;
-    background-image: url(img/DSC00202.JPG);
-    background-size: cover;
-    background-position: center;
+  padding: 3rem;
+  margin-top: auto;
+  position: relative;
+  min-height: 100vh;
+  background-image: url(img/DSC00202.JPG);
+  background-size: cover;
+  background-position: center;
 }
 
 .hero::before {
@@ -114,29 +113,31 @@ font-size: 1.2rem;
 
 /* CSS untuk navbar dengan background blur */
 .navbar {
-  backdrop-filter: blur(10px); 
+  backdrop-filter: blur(10px);
   background-color: transparent !important;
-  
-  
 }
+
 .navbar-nav {
   margin-left: auto;
   color: white;
 }
+
 .nav-link {
   color: white;
   font-size: 1.5rem;
 }
-/* CSS untuk toggle button */
+
+/* Toggle button */
 .navbar-toggler {
-  background-color:white;
+  background-color: white;
   font-size: 1.6rem;
-  
 }
+
 .nav-span {
   color: white;
 }
-/* Tambahan untuk mengatur gaya font Aziz&Yati */
+
+/* Aziz & Yati font style */
 .navbar-brand {
   font-family: 'Allura', cursive;
   font-size: 3rem;
