@@ -716,34 +716,4 @@ footer, body {
   
 }
 
-.info {
-  margin: 7rem 0;
-}
 
-/* Untuk layar dengan tinggi di bawah 600px */
-@media (max-height: 600px) {
-  section {
-    margin: 20px 0;
-  }
-}
-
-/* Untuk layar dengan tinggi antara 600px hingga 800px */
-@media (min-height: 601px) and (max-height: 800px) {
-  section {
-    margin: 40px 0;
-  }
-}
-
-/* Untuk layar dengan tinggi antara 800px hingga 1000px */
-@media (min-height: 801px) and (max-height: 1000px) {
-  section {
-    margin: 60px 0;
-  }
-}
-
-/* Untuk layar dengan tinggi di atas 1000px */
-@media (min-height: 1001px) {
-  section {
-    margin: 80px 0;
-  }
-}
