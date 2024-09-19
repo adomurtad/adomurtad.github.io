@@ -64,6 +64,7 @@ body {
 .hero h4,
 .hero p {
     text-shadow: var(--shadow);
+     color: FFFFFF;
 }
 
 .hero h1 {
