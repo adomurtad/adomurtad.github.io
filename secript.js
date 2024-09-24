@@ -83,3 +83,43 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+// transisis gambar//
+function moveImage(imgElement) {
+    imgElement.classList.add('clicked'); // Tambahkan class 'clicked' untuk menghentikan animasi dan geser gambar
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Tambahkan kelas 'is-visible' jika elemen terlihat
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target); // Hentikan pengamatan setelah animasi
+        }
+      });
+    });
+  
+    // Pilih semua elemen yang akan di-observe
+    const timelineItems = document.querySelectorAll('.line li');
+  
+    // Periksa jika elemen sudah berada di viewport pada saat halaman pertama kali dimuat
+    timelineItems.forEach(item => {
+      observer.observe(item); // Aktifkan pengamatan pada setiap item
+      if (isElementInViewport(item)) {
+        item.classList.add('is-visible'); // Tambahkan kelas jika sudah di viewport
+      }
+    });
+  
+    // Fungsi untuk memeriksa apakah elemen berada di viewport
+    function isElementInViewport(el) {
+      const rect = el.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+  });
+  

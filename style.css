@@ -4,9 +4,21 @@
   --pink: #f14e95;
   --bg: #0a0a0a;
   --shadow: 0 5px 5px rgba(3, 3, 3, 0.2);
-  --animate-duration: 500ms;
-  --animate-delay: 100ms;
+
 }
+/* Awal: Elemen tidak terlihat */
+.section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Saat elemen terlihat di viewport */
+.section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 body.no-scroll {
   overflow: hidden;
@@ -107,16 +119,29 @@ border-radius: 50%;
 font-size: 1.2rem;
 
 } 
-
-.hero a {
-  color: var(white);
-  background-color: FFFFFF;
-}
-
-.hero a:hover {
-  background-color: var(white);
+#play-music {
+  display: inline-block;
+  padding: 10px 25px;
+  font-size: 10px;
+  font-weight: bold;
   color: white;
+  background-color: #6678cc; /* Warna coral yang elegan */
+  border-radius: 15px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
+
+#play-music:hover {
+  background-color: #ff6347; /* Warna sedikit lebih gelap saat di-hover */
+  transform: translateY(-5px); /* Memberikan efek tombol naik saat di-hover */
+}
+
+#play-music:active {
+  background-color: #ff4500; /* Warna saat tombol ditekan */
+  transform: translateY(2px); /* Memberikan efek tombol turun saat ditekan */
+}
+
 
 /* CSS untuk navbar dengan background blur */
 /* Navbar with background blur */
@@ -157,8 +182,52 @@ font-size: 1.2rem;
 
 
 
-/* Section Home */
+/* Section Home transisi*/
+.kotak {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1s ease forwards;
+}
 
+.couple img {
+  transition: transform 0.5s ease;
+}
+
+.couple img:hover {
+  transform: scale(1.1);
+}
+
+.aziz, .yati {
+  display: inline-block;
+  transition: color 0.5s ease;
+}
+
+.aziz:hover, .yati:hover {
+  color: #5881b6; 
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h2, h3 {
+  opacity: 0;
+  animation: fadeInText 1.5s ease forwards;
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .home h2,
 .info h2,
 .galery h2 {
@@ -207,7 +276,51 @@ font-family: 'Roboto', 'Arial', sans-serif;
 
 
 /* Info */
+.kotak {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease forwards;
+}
 
+/* Animasi Bounce untuk H2 */
+h2.animate__animated {
+  animation-duration: 1.5s;
+}
+
+/* Transisi dan Hover untuk Button */
+.btn-light {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-light:hover {
+  background-color: #85827b;
+  transform: scale(1.1);
+}
+
+.card:hover .day, 
+.card:hover .date, 
+.card:hover .year {
+  color: #c4317a; /* Warna saat di-hover */
+}
+.card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+/* Animasi Fade-In Up */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .info {
   color: white;
   padding-top: 5rem;
@@ -254,6 +367,7 @@ font-family: 'Roboto', 'Arial', sans-serif;
   text-align: center;
   justify-content: center;
   margin-bottom: 5rem;
+
 }
 
 .heading {
@@ -289,7 +403,7 @@ font-family: 'Roboto', 'Arial', sans-serif;
 .vertical-line {
   width: 1px;
   height: 50px;
-  background-color: black; /* Warna garis sesuai dengan elemen lainnya */
+  background-color: black; 
   font-weight: bold;
 }
 .time {
@@ -407,13 +521,24 @@ left: -8px;
 }
 
 
-
-
 .galery h2 {
   padding: 2rem;
 }
-.galery col mt-3 {
-  animation: zoomInBackground 20s ease-in-out infinite;
+
+img {
+  width: 200px;
+  transition: transform 0.5s ease;
+}
+
+
+img:hover {
+  transform: translateX(20px);
+}
+
+
+.clicked {
+  transform: translateX(200px);
+  transition: transform 1s ease-in-out;
 }
 
 /* RSVV */
