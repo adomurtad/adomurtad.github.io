@@ -1,44 +1,49 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap"); */
 
 :root {
-    --pink: #f14e95;
-    --bg: #0a0a0a;
-    --shadow: 0 5px 5px rgba(3, 3, 3, 0.2);
-    --animate-duration: 500ms;
-    --animate-delay: 100ms;
+  --pink: #f14e95;
+  --bg: #0a0a0a;
+  --shadow: 0 5px 5px rgba(3, 3, 3, 0.2);
+  --animate-duration: 500ms;
+  --animate-delay: 100ms;
 }
 
 body.no-scroll {
-    overflow: hidden;
-    overflow-x: hidden;
-  
+  overflow: hidden;
+  overflow-x: hidden;
+
 }
 body {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
-  
+
+
+
 @keyframes zoomInBackground {
-    0% {
-      background-size: 100%;
-    }
-    100% {
-      background-size: 120%;
-    }
+  0% {
+    background-size: 100%;
   }
-  
-  body {
-    margin: 0;
-    padding: 0;
-    background-position: center;
-    background-size: cover;
-    box-sizing: border-box;
-    height: 5990px;
-    background-image: url('https://i.pinimg.com/originals/07/1f/65/071f65fad1b23671fa51d59ef3944284.jpg');
-    background-size: cover;
-    background-position: center;
-    animation: zoomInBackground 25s ease-in-out infinite;
+  100% {
+    background-size: 120%;
   }
+}
+
+body {
   
+  margin: 0;
+  padding: 0;
+  background-position: center;
+  background-size: cover;
+  box-sizing: border-box;
+  max-width: 3000px;
+  margin: auto !important;
+  background-image: url('https://i.pinimg.com/originals/07/1f/65/071f65fad1b23671fa51d59ef3944284.jpg');
+  background-size: cover;
+  background-position: center;
+  animation: zoomInBackground 25s ease-in-out infinite;
+  
+
+}
 
 .hero {
   padding: 3rem;
@@ -46,48 +51,49 @@ body {
   position: relative;
   min-height: 100vh;
   background-image: url(img/DSC.jpeg);
+  filter: brightness(100%);
   background-size: cover;
   background-position: center;
 }
 
 .hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 .hero h1,
 .hero h4,
 .hero p {
-    text-shadow: var(--shadow);
-     color: FFFFFF;
+  text-shadow: var(--shadow);
+  color: white;
 }
 
 .hero h1 {
-    font-family: 'Allura';
-    font-size: 8rem;
+  font-family: 'Allura';
+  font-size: 8rem;
 }
 
 #hero .aziz,
 #hero .yati {
-    font-family: 'Allura';
-    font-weight: 300;
+  font-family: 'Allura';
+  font-weight: 300;
 }
 
 .hero h4 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 .hero p {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 .simply-countdown>.simply-section{
-    width: 50px;
+  width: 50px;
 height: 50px;
 padding: 80px;
 display: flex;
@@ -103,19 +109,21 @@ font-size: 1.2rem;
 } 
 
 .hero a {
-    color: var(white);
-    background-color: rgb(240, 230, 230);
+  color: var(white);
+  background-color: FFFFFF;
 }
 
 .hero a:hover {
-    background-color: var(white);
-    color: white;
+  background-color: var(white);
+  color: white;
 }
 
 /* CSS untuk navbar dengan background blur */
+/* Navbar with background blur */
 .navbar {
   backdrop-filter: blur(10px);
   background-color: transparent !important;
+  margin-bottom: 2rem;
 }
 
 .navbar-nav {
@@ -150,570 +158,650 @@ font-size: 1.2rem;
 
 
 /* Section Home */
-.home {
-    background-color: rgba(233, 219, 219, 0);
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    margin-top: -2rem;
-    padding-top: 10rem;
-    padding-bottom: 5rem;
-}
 
 .home h2,
 .info h2,
 .galery h2 {
-    color:white;
-    font-family: 'Allura';
-    font-size: 4rem;
+  color:white;
+  font-family: 'Allura';
+  font-size: 4rem;
 }
-
+.home h2 {
+  padding: 2rem;
+}
 .home h3 {
-    color: white;
-    font-family: 'Roboto', 'Arial', sans-serif;
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    margin-left: 10px;
+  color: white;
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 3rem;
+  margin-left: 10px;
 }
 
 #home .aziz,
 #home .yati {
-    font-family: 'Allura';
-    font-size: 4rem;
-    font-weight: 400;
+  font-family: 'Allura';
+  font-size: 4rem;
+  font-weight: 400;
 }
 
 .home p,
 .galery p {
-  font-family: 'Roboto', 'Arial', sans-serif;
-    font-size: 1.5rem;
-    color: white;
+font-family: 'Roboto', 'Arial', sans-serif;
+  font-size: 1.5rem;
+  color: white;
 }
 
 
 /* Gambar */
 .home .couple {
-    margin-top: 100px;
-    margin-left:  10px;
-    margin-right: 20px;
-    padding-top: -4rem;
+  margin-top: 26px;
+  margin-left:  10px;
+  margin-right: 20px;
+  padding-top: -4rem;
 }
 
 .home .couple img {
-    width: 100%;
-    margin-left: 7px;
+  width: 100%;
+  margin-left: 0;
 }
 
+
 /* Info */
+
 .info {
-    background-position: center;
-    color: white;
-    padding-top: 9rem;
-    padding-bottom: 7rem;
+  color: white;
+  padding-top: 5rem;
+  padding-bottom: 7rem;
 }
 .info a {
-  font-family: 'Roboto', 'Arial', sans-serif;
-  margin: 4rem;
+font-family: 'Roboto', 'Arial', sans-serif;
+margin: 3rem;
 }
 .info h2 {
-    color: white;
-    font-family: 'Allura';
-    font-size: 4rem;
+  color: white;
+  font-family: 'Allura';
+  font-size: 4rem;
+  padding: 2rem;
 }
 .info h3 {
-  font-family: 'Roboto', 'Arial', sans-serif;
-  color: white;
-  font-size: 1.5rem;
-  margin: 4rem;
+font-family: 'Roboto', 'Arial', sans-serif;
+color: white;
+font-size: 1.5rem;
+margin: 2rem;
 }
 .info p {
-  font-family: 'Roboto', 'Arial', sans-serif;
-  color: white;
-  font-size: 1.5rem;
+font-family: 'Roboto', 'Arial', sans-serif;
+color: white;
+font-size: 1.5rem;
 }
 
 .info .description {
-  font-family: 'Roboto', 'Arial', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 100;
+font-family: 'Roboto', 'Arial', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 100;
 }
-
+.info span {
+  font: 1em sans-serif;
+  font-size: 2rem;
+}
 /* Card */
-.card-body {
-    background: linear-gradient(rgba(243, 230, 240, 0.678), #d8d8dd);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.card {
+  background-color: rgb(194, 189, 189);
+  padding: 20px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 5rem;
 }
 
-.icon-text {
-    display: flex;
-    align-items: center;
+.heading {
+  font-family: 'Allura', cursive;
+  font-size: 24px;
+  color: #a99279;
+  margin-bottom: 10px;
 }
 
-.icon-text svg {
-    margin-right: 5px;
+.month {
+  font-size: 26px;
+  color: #a99279;
+  margin-bottom: 10px;
 }
 
-.card-header,
-.card-footer {
-    background-color: rgba(242, 230, 240, 0.678); 
+.date-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.day, .year {
+  font-size: 8rem;
+  color: white;
+}
+
+.date {
+  font-size: 6rem;
+  color: rgb(250, 244, 244);
+  font-weight: bold;
+}
+.vertical-line {
+  width: 1px;
+  height: 50px;
+  background-color: black; /* Warna garis sesuai dengan elemen lainnya */
+  font-weight: bold;
+}
+.time {
+  color: whitesmoke;
+  margin-bottom: 10px;
 }
 
 /* CSS dasar untuk section timeline */
+
 #timeline {
-  position: relative;
-  padding: 20px 0;
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-  color: white;
+position: relative;
+padding: 20px 0;
+width: 100%;
+max-width: 800px;
+margin: 0 auto;
+color: white;
 }
 #timeline h2 {
-  font-family: 'Allura';
-  font-size: 4rem;
-  text-align: center;
-  margin: 6rem;
+font-family: 'Allura';
+font-size: 4rem;
+text-align: center;
+margin: 3rem;
 }
 
 #timeline p {
-  font-family: 'Roboto', 'Arial', sans-serif;
-  font-size: 1.3rem;
+font-family: 'Roboto', 'Arial', sans-serif;
+font-size: 1.3rem;
 }
 #timeline ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  position: relative;
+list-style: none;
+padding: 0;
+margin: 0;
+position: relative;
 }
 
 /* Garis tengah vertikal */
 #timeline ul.line::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 0;
-  bottom: 0;
-  width: 4px; 
-  background: #cfbaba;
-  transform: translateX(-50%);
-  z-index: 1;
+content: '';
+position: absolute;
+left: 50%;
+top: 0;
+bottom: 0;
+width: 4px; 
+background: #cfbaba;
+transform: translateX(-50%);
+z-index: 1;
 }
 
 /* Gaya setiap item dalam timeline */
 #timeline ul.line li {
-  position: relative;
-  width: 50%;
-  padding: 10px 20px;
-  box-sizing: border-box;
+position: relative;
+width: 50%;
+padding: 10px 20px;
+box-sizing: border-box;
 }
 
 #timeline ul.line li:nth-child(odd) {
-  left: 0;
-  text-align: right; 
+left: 0;
+text-align: right; 
 }
 
 #timeline ul.line li:nth-child(even) {
-  left: 50%; 
-  text-align: left; 
+left: 50%; 
+text-align: left; 
 }
 
 /* Gaya untuk kontainer konten */
 #timeline ul.line li .cont {
-  position: relative;
-  background: transparent; 
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 2;
+position: relative;
+background: transparent; 
+padding: 15px;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+z-index: 2;
 }
 
 /* paragraf ke kiri di dalam .cont */
 #timeline ul.line li .cont p {
-  text-align: left; 
-  font-size: 1.3rem;
+text-align: left; 
+font-size: 1.3rem;
 }
 
 #timeline ul.line li .cont h3 {
-  font-family: 'Allura';
-  text-align: left; 
-  font-size: 4rem;
-  
+font-family: 'Allura';
+text-align: left; 
+font-size: 4rem;
+
 }
 /* Gaya tambahan untuk elemen waktu */
 #timeline ul.line li .cont time {
-  display: block;
-  margin-top: 10px;
-  color: white;
-  font-size: 1.4em;
+display: block;
+margin-top: 10px;
+color: white;
+font-size: 1.4em;
 }
 
 /* Titik di tengah timeline */
 #timeline ul.line li::before {
-  content: '';
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  background: #41e6e6; 
-  border-radius: 50%;
-  top: 20px; 
-  z-index: 2;
+content: '';
+position: absolute;
+width: 15px;
+height: 15px;
+background: #41e6e6; 
+border-radius: 50%;
+top: 20px; 
+z-index: 2;
 }
 
 #timeline ul.line li:nth-child(odd)::before {
-  right: -8px; 
+right: -8px; 
 }
 
 #timeline ul.line li:nth-child(even)::before {
-  left: -8px; 
+left: -8px; 
 }
 
 
 
 
-.galery span {
-  font-family: 'Roboto', 'Arial', sans-serif;
-  font-size: 1.3rem;
-  color: white;
-  margin: 3rem;
+.galery h2 {
+  padding: 2rem;
 }
+.galery col mt-3 {
+  animation: zoomInBackground 20s ease-in-out infinite;
+}
+
 /* RSVV */
-.rsvv .container {
-    padding: 7%;
+.rsvv .section {
+  margin-bottom: 50px; /* Atur jarak antar section */
 }
-
 .rsvv h2 {
-    font-family: 'Allura';
-    font-size: 4rem;
-    color: white;
+  font-family: 'Allura';
+  font-size: 4rem;
+  color: white;
+  padding: 2rem;
 }
 
 .rsvv p {
-    font-family: 'Roboto', 'Arial', sans-serif;
-    font-size: 1.5rem;
-    color: white;
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-size: 1.5rem;
+  color: white;
 }
 /* CSS untuk form */
 form#my-form {
-    background-color: transparent;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 600px;
+  margin: 50px auto;
+  font-family: 'Allura', cursive;
+  color: white;
+}
+
+/* Gaya label dan input */
+form#my-form .form-label {
+  font-weight: 590;
+  margin-bottom: 10px;
+  color: white !important;
+  font-size: 23px;
+  
+}
+
+form#my-form .form-control, 
+form#my-form .form-select {
+
+  background-color:transparent;
+  border-radius: 6px;
+  border: 1px solid white;
+  box-sizing: border-box;
+  font-size: 14px;
+  padding: 6px;
+  color: white;
+}
+
+
+form#my-form .form-control:focus,
+form#my-form .form-select:focus {
+  font: 1em sans-serif;
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25);
+  font-size: 16px; 
+}
+
+/* Gaya tombol */
+form#my-form .btn-primary {
+  background-color: #0085c3;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  margin: 2rem;
+  width: 100px; 
+  height: 39px;
+  padding: 10px 20px;
+  font-size: 19px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form#my-form .btn-primary:hover {
+  background-color: transparent;
+  border-color: #939cec;
+  color: black;
+}
+
+/* Link "Lihat Ucapan" */
+form#my-form a {
+  margin: 2rem;
+  margin-right: auto;
+  font-size: 21px;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+form#my-form a:hover {
+  font-family: 'Josefin', serif;
+  font-style: italic;
+  color: blueviolet;
+  font-size: small;
+}
+
+/* Media Queries untuk Responsivitas */
+
+/* Ukuran layar ponsel */
+@media (max-width: 576px) {
+  form#my-form {
+    padding: 15px;
+    max-width: 100%;
+  }
+}
+
+/* Ukuran layar tablet */
+@media (min-width: 577px) and (max-width: 768px) {
+  form#my-form {
     padding: 20px;
-    max-width: 600px;
-    margin: 50px auto;
-    font-family: 'Allura', cursive;
-    color: white;
+    max-width: 90%;
   }
-  
-  /* Gaya label dan input */
-  form#my-form .form-label {
-    font-weight: 590;
-    margin-bottom: 10px;
-    color: white !important;
-    font-size: 23px;
-    
-  }
-  
-  form#my-form .form-control, 
-  form#my-form .form-select {
+}
 
-    background-color:transparent;
-    border-radius: 6px;
-    border: 1px solid white;
-    box-sizing: border-box;
-    font-size: 14px;
-    padding: 6px;
-    color: white;
+/* Ukuran layar laptop dan lebih besar */
+@media (min-width: 769px) {
+  form#my-form {
+    padding: 20px;
+    max-width: 400px;
   }
+}
 
-
-  form#my-form .form-control:focus,
-  form#my-form .form-select:focus {
-    font: 1em sans-serif;
-    border-color: #4CAF50;
-    box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25);
-    font-size: 16px; 
-  }
-  
-  /* Gaya tombol */
-  form#my-form .btn-primary {
-    background-color: #0085c3;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    margin: 2rem;
-    width: 100px; 
-    height: 39px;
-    padding: 10px 20px;
-    font-size: 19px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  form#my-form .btn-primary:hover {
-    background-color: transparent;
-    border-color: #939cec;
-    color: black;
-  }
-  
-  /* Link "Lihat Ucapan" */
-  form#my-form a {
-    margin: 2rem;
-    margin-right: auto;
-    font-size: 21px;
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  form#my-form a:hover {
-    font-family: 'Josefin', serif;
-    font-style: italic;
-    color: blueviolet;
-    font-size: small;
-  }
-  
-  /* Media Queries untuk Responsivitas */
-  
-  /* Ukuran layar ponsel */
-  @media (max-width: 576px) {
-    form#my-form {
-      padding: 15px;
-      max-width: 100%;
-    }
-  }
-  
-  /* Ukuran layar tablet */
-  @media (min-width: 577px) and (max-width: 768px) {
-    form#my-form {
-      padding: 20px;
-      max-width: 90%;
-    }
-  }
-  
-  /* Ukuran layar laptop dan lebih besar */
-  @media (min-width: 769px) {
-    form#my-form {
-      padding: 20px;
-      max-width: 400px;
-    }
-  }
-  
 
 
 
 /* Gifts */
 .gifts h2 {
-    font-family: 'Allura';
-    font-size: 4rem;
-    color: white;
+  font-family: 'Allura';
+  font-size: 4rem;
+  color: white;
+  padding: 2rem;
 }
 
-.gifts p,
-.gifts span {
-  font-family: 'Roboto', 'Arial', sans-serif;
-    font-size: 1.5rem;
-    color: white;
+.gifts p {
+font-family: 'Roboto', 'Arial', sans-serif;
+  font-size: 1.5rem;
+  color: white;
 }
 
 
 /* Card Bank */
 .card-bank {
-    width: 315px;
-    height: 180px;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    background: rgba(255, 255, 255, 0.4);
-    border-radius: 10px;
-    z-index: 1;
-    overflow: hidden;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    margin: 30px auto; 
+  width: 315px;
+  height: 180px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  z-index: 1;
+  overflow: hidden;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  margin: 30px auto; 
 }
 
 .visa_logo {
-    float: right;
-    padding: 8px;
+  float: right;
+  padding: 8px;
 }
 
 .visa_logo img {
-    width: 65px;
-    height: 25px;
+  width: 65px;
+  height: 25px;
 }
-
+.visa p {
+  font-size: 30px;
+}
 .visa_info {
-    margin: 26px 0;
+  margin: 26px 0;
 }
 
 .visa_info img {
-    width: 50px;
-    height: 40px;
+  width: 50px;
+  height: 40px;
 }
 
 img {
-    margin-left: 15px;
-    margin-top: 10px;
+  margin-left: 15px;
+  margin-top: 10px;
 }
 
 p {
-    margin-left: 15px;
+  margin-left: 15px;
 }
 
 .visa_info p {
-    font-size: 20px;
-    padding: 9px 0;
-    letter-spacing: 2px;
-    color: white;
+  font-size: 20px;
+  padding: 9px 0;
+  letter-spacing: 2px;
+  color: white;
 }
 
 
 
 footer, body {
-    height: 100%;
-    margin: 0;
-    color: white;
-    
-  }
-  .footer.container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: whitesmoke;
-  }
-  footer {
-    margin-top: auto;
-  }
+  height: 100%;
+  margin: 0;
+  color: white;
   
+}
+.footer.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: whitesmoke;
+}
+footer {
+  margin-top: auto;
+}
+
 
 .footer a {
-    color: var(--bg);
-    font-weight: bold;
-    font-family: 'Roboto', 'Arial', sans-serif;
+  color: var(--bg);
+  font-weight: bold;
+  font-family: 'Roboto', 'Arial', sans-serif;
 
 }
 
 .myfooter ul {
-    list-style-type: none; 
-    padding: 0;
-    margin: 0; 
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto; 
-  }
-  
-  ul li {
-    margin-right: 15px;
-  }
-  
-  ul li a {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  ul li a svg, ul li a i {
-    font-size: 24px;
+  list-style-type: none; 
+  padding: 0;
+  margin: 0; 
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto; 
 }
-    
- 
+
+ul li {
+  margin-right: 15px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul li a svg, ul li a i {
+  font-size: 24px;
+}
+  
+
 
 .audio-icon-wrapper {
-    color: white;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    cursor: pointer;
-    display: none; 
-    animation: rotating 4s linear infinite;
-    transform-origin: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 0;
+  color: white;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  display: none; 
+  animation: rotating 4s linear infinite;
+  transform-origin: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
 }
 /* Styling untuk audio container */
 #audio-container {
-    display: none;
+  display: none;
 }
 
 .audio-icon-wrapper {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    cursor: pointer;
-    display: none;
-    z-index: 1000;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  display: none;
+  z-index: 1000;
 }
 
 .audio-icon-wrapper svg {
-    transition: transform 0.3s ease; 
+  transition: transform 0.3s ease; 
 }
 @keyframes rotating {
-    from {
-        transform: rotate(0);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+  from {
+      transform: rotate(0);
+  }
+  to {
+      transform: rotate(360deg);
+  }
 }
+
+
+
 
 /* Media Queries */
 
 
 @media (min-width: 768px) {
-    html {
-        font-size: 65%;
-    }
+  html {
+    font-size: 65%; /* Ukuran font untuk layar besar */
+  }
 
-    .simply-countdown > .simply-section {
-        padding: 15px;
-        margin: 5px;
-    }
+  .simply-countdown > .simply-section {
+    padding: 15px;
+    margin: 5px;
+    border: 5px solid white;
+    border-radius: 15px;
+  }
 
-    
-}
-/* Media query untuk tampilan mobile */
-@media (max-width: 768px) {
-  .col-lg-6 {
-      margin-bottom: 20px;
+  .kotak {
+    width: 100%;           /* Lebar tetap untuk desktop */
+    height: 600px;
+    border: 5px solid white;
+    margin: 0 auto 9rem;
+    max-width: 6200px;
+    border-radius: 15px;
   }
 }
 
+@media (max-width: 768px) {
+  .col-lg-6 {
+    margin-bottom: 20px;
+  }
 
-@media (min-width: 576px) {
-    html {
-        font-size: 60%;
-    }
-    .simply-countdown > .simply-section {
-        padding: 10px;
-        margin: 5px;
-    }
+  .simply-countdown > .simply-section {
+    padding: 10px;
+    margin: 5px;
+    border: 5px solid white;
+    border-radius: 15px;
+  }
 
-    
+  .kotak {
+    width: 100%;            /* Full width untuk tablet dan handphone */
+    height: 600px;
+    border: 5px solid white;
+    margin: 0 auto 9rem;
+    border-radius: 15px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  html {
+    font-size: 60%; /* Ukuran font untuk tablet */
+  }
+
+  .simply-countdown > .simply-section {
+    padding: 10px;
+    margin: 5px;
+    border: 5px solid white;
+    border-radius: 15px;
+  }
+
+  .kotak {
+    width: 100%;            /* Full width untuk tablet */
+    height: 600px;
+    border: 5px solid white;
+    margin: 0 auto 9rem;
+    border-radius: 15px;
+  }
 }
 
 @media (max-width: 575.98px) {
-    html {
-        font-size: 50%;
-    }
+  html {
+    font-size: 50%; /* Ukuran font untuk handphone */
+  }
 
-    .simply-countdown > .simply-section {
-        padding: 5px;
-        margin: 5px;
-    }
+  .simply-countdown > .simply-section {
+    padding: 5px;
+    margin: 5px;
+    border: 5px solid white;
+    border-radius: 15px;
+  }
 
-    
+  .info > .home > .galery > .timeline > .kotak {
+    width: 100%;            /* Full width untuk handphone */
+    height: 700px;
+    border: 5px solid white;
+    margin: 2rem;
+    border-radius: 15px;
+  }
+
 }
-/* Section Home */
+
 .kotak {
-  border: 5px solid white;
-  padding: 18px;
-  margin: 0 auto;
-  max-width: 700px;
-  border-radius: 15px;
+  width: auto; /* Full width untuk handphone */
+  height: auto;
+  max-width: 3000px;
+  margin-bottom: 9rem;
+  padding-bottom: 9rem;
+  box-sizing: border-box;
 
-
-  
 }
-
-
+.section {
+  margin-bottom: 2rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
