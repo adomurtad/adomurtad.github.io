@@ -89,6 +89,10 @@ function moveImage(imgElement) {
     imgElement.classList.add('clicked'); // Tambahkan class 'clicked' untuk menghentikan animasi dan geser gambar
 }
 
+
+const IntersectionObserver = function call(a) {console.log(a)
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {

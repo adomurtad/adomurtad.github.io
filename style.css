@@ -367,6 +367,7 @@ font-family: 'Roboto', 'Arial', sans-serif;
   text-align: center;
   justify-content: center;
   margin-bottom: 5rem;
+  margin: 13px;
 
 }
 
@@ -832,6 +833,7 @@ ul li a svg, ul li a i {
   html {
     font-size: 65%;
   }
+  
 
   .simply-countdown > .simply-section {
     padding: 15px;
@@ -847,6 +849,10 @@ ul li a svg, ul li a i {
     margin: 0 auto 9rem;
     max-width: 6200px;
     border-radius: 15px;
+  }
+  * {
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -869,6 +875,10 @@ ul li a svg, ul li a i {
     margin: 0 auto 9rem;
     border-radius: 15px;
   }
+  * {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
@@ -889,6 +899,10 @@ ul li a svg, ul li a i {
     border: 5px solid white;
     margin: 0 auto 9rem;
     border-radius: 15px;
+  }
+  * {
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -911,6 +925,10 @@ ul li a svg, ul li a i {
     margin: 2rem;
     border-radius: 15px;
   }
+  * {
+    margin: 0;
+    padding: 0;
+  }
 
 }
 
@@ -926,7 +944,30 @@ ul li a svg, ul li a i {
 .section {
   margin-bottom: 2rem;
 }
-* {
-  margin: 0;
-  padding: 0;
+
+
+/* Wrapper untuk membungkus gambar */
+.scrolling-wrapper {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%; /* Sesuaikan dengan lebar kontainer */
+  box-shadow:5px 5px 15px rgba(248, 247, 247, 0.3);
+}
+
+/* Gambar bergerak */
+.scrolling-wrapper img {
+  width: 150px;
+  margin-right: 9px;
+  animation: scrollRight 20s linear infinite;
+}
+
+/* Animasi scroll dari kiri ke kanan */
+@keyframes scrollRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
