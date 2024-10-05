@@ -51,7 +51,6 @@ body {
   margin: auto !important;
   background-image: url('https://i.pinimg.com/originals/07/1f/65/071f65fad1b23671fa51d59ef3944284.jpg');
   background-size: cover;
-  background-position: center;
   animation: zoomInBackground 25s ease-in-out infinite;
   
 
@@ -441,6 +440,10 @@ position: relative;
 }
 
 /* Garis tengah vertikal */
+#line {
+  position: relative;
+  padding-left: 30px;
+}
 #timeline ul.line::before {
 content: '';
 position: absolute;
@@ -946,23 +949,37 @@ ul li a svg, ul li a i {
 }
 
 
-/* Wrapper untuk membungkus gambar */
+
 .scrolling-wrapper {
   display: flex;
   overflow: hidden;
   white-space: nowrap;
-  width: 100%; /* Sesuaikan dengan lebar kontainer */
-  box-shadow:5px 5px 15px rgba(248, 247, 247, 0.3);
-}
+  width: 100%;
 
-/* Gambar bergerak */
+}
+.scrolling-wrapper img {
+  transition: 0.4s ease;
+
+}
+.scrolling-wrapper:hover > :not(:hover) {
+  filter: blur(5px);
+
+}
+.scrolling-wrapper {
+  filter: drop-shadow(1px 10px 15px rgba(78, 46, 27, 0.925));
+}
 .scrolling-wrapper img {
   width: 150px;
   margin-right: 9px;
   animation: scrollRight 20s linear infinite;
 }
 
-/* Animasi scroll dari kiri ke kanan */
+
+.scrolling-wrapper img:hover {
+  filter: grayscale(10px);
+  margin: 4px;
+}
+
 @keyframes scrollRight {
   0% {
     transform: translateX(-100%);

@@ -97,33 +97,21 @@ document.addEventListener("DOMContentLoaded", function() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          // Tambahkan kelas 'is-visible' jika elemen terlihat
+          // Tambahkan kelas 'is-visible' jika elemen terlihat di viewport
           entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target); // Hentikan pengamatan setelah animasi
+          observer.unobserve(entry.target); // Hentikan pengamatan setelah elemen terlihat
         }
       });
     });
   
-    // Pilih semua elemen yang akan di-observe
-    const timelineItems = document.querySelectorAll('.line li');
+    // Pilih semua elemen di dalam body yang akan diobservasi
+    const bodyItems = document.querySelectorAll('body *');
   
-    // Periksa jika elemen sudah berada di viewport pada saat halaman pertama kali dimuat
-    timelineItems.forEach(item => {
-      observer.observe(item); // Aktifkan pengamatan pada setiap item
-      if (isElementInViewport(item)) {
-        item.classList.add('is-visible'); // Tambahkan kelas jika sudah di viewport
-      }
+    // Aktifkan pengamatan pada setiap elemen
+    bodyItems.forEach(item => {
+      observer.observe(item);
     });
-  
-    // Fungsi untuk memeriksa apakah elemen berada di viewport
-    function isElementInViewport(el) {
-      const rect = el.getBoundingClientRect();
-      return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-      );
-    }
   });
+  
+  
   
