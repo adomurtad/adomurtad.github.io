@@ -50,18 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-document.addEventListener('DOMContentLoaded', function() {
-    const audio = document.getElementById('song');
-    const volumeControl = document.getElementById('volume');
 
-    // Set initial volume
-    audio.volume = volumeControl.value;
-
-    // Handle volume change
-    volumeControl.addEventListener('input', function() {
-        audio.volume = volumeControl.value;
-    });
-});
 
 const urlParams = new URLSearchParams(window.location.search);
 const nama = urlParams.get('nama') || '';
@@ -84,34 +73,56 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// transisis gambar//
-function moveImage(imgElement) {
-    imgElement.classList.add('clicked'); // Tambahkan class 'clicked' untuk menghentikan animasi dan geser gambar
-}
-
-
-const IntersectionObserver = function call(a) {console.log(a)
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          // Tambahkan kelas 'is-visible' jika elemen terlihat di viewport
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target); // Hentikan pengamatan setelah elemen terlihat
-        }
-      });
-    });
+window.addEventListener('scroll', () => {
+    const images = document.querySelectorAll('.scrolling-wrapper img');
+    images.forEach(img => {
+      const position = img.getBoundingClientRect().top;
+      const screenPosition = window.innerHeight / 1;
   
-    // Pilih semua elemen di dalam body yang akan diobservasi
-    const bodyItems = document.querySelectorAll('body *');
-  
-    // Aktifkan pengamatan pada setiap elemen
-    bodyItems.forEach(item => {
-      observer.observe(item);
+      if (position < screenPosition) {
+        img.classList.add('start-animation'); // Mulai animasi setelah scroll
+      }
     });
   });
   
-  
+
+function moveImage(imgElement) {
+    imgElement.classList.add('scrollRight');
+}
+
+function animateSections(sections) {
+    sections.forEach(section => {
+        if (section) {
+            let position = section.getBoundingClientRect().top;
+            let screenPosition = window.innerHeight / 1;
+
+            if (position < screenPosition) {
+                section.classList.add('move-up');
+            }
+        }
+    });
+}
+
+function animateImages(images) {
+    images.forEach(image => {
+        let position = image.getBoundingClientRect().top;
+        let screenPosition = window.innerHeight / 1;
+
+        if (position < screenPosition) {
+            image.classList.add('scrollRight');
+            image.style.opacity = "1";
+        }
+    });
+}
+
+// Pilih elemen-elemen yang akan dianimasikan
+let sections = document.querySelectorAll('h3, h2, h1, p, span, section, id');
+let images = document.querySelectorAll('img');
+
+// Panggil animasi saat halaman di-scroll
+window.addEventListener('scroll', () => {
+    animateSections(sections);
+    animateImages(images);
+});
+
   

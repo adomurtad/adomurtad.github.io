@@ -6,19 +6,6 @@
   --shadow: 0 5px 5px rgba(3, 3, 3, 0.2);
 
 }
-/* Awal: Elemen tidak terlihat */
-.section {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-/* Saat elemen terlihat di viewport */
-.section.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 
 body.no-scroll {
   overflow: hidden;
@@ -205,28 +192,8 @@ font-size: 1.2rem;
   color: #5881b6; 
 }
 
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-h2, h3 {
-  opacity: 0;
-  animation: fadeInText 1.5s ease forwards;
-}
 
-@keyframes fadeInText {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 .home h2,
 .info h2,
 .galery h2 {
@@ -313,13 +280,7 @@ h2.animate__animated {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   transform: translateY(-5px);
 }
-/* Animasi Fade-In Up */
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+
 .info {
   color: white;
   padding-top: 5rem;
@@ -980,11 +941,49 @@ ul li a svg, ul li a i {
   margin: 4px;
 }
 
+
+@keyframes move-up {
+  0% {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.move-up {
+  animation: move-up 2s ease-out forwards;
+  opacity: 1;
+}
+
+/* Animasi untuk gambar bergerak dari kiri ke kanan */
 @keyframes scrollRight {
   0% {
+    opacity: 0;
     transform: translateX(-100%);
   }
   100% {
-    transform: translateX(100%);
+    opacity: 1;
+    transform: translateX(0);
   }
+}
+
+.scrollRight {
+  animation: scrollRight 2s ease-out forwards;
+  opacity: 1;
+}
+
+/* Menyembunyikan elemen sebelum di-scroll */
+h1, h2, h3, p, span {
+  opacity: 0 default;
+  transform: translateY(0);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+img {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
